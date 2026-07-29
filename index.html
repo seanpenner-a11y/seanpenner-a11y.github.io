@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Franklin Craftsman — Build It Like You Mean It | Spring Hill, TN</title>
+<meta name="description" content="Premium bathroom remodels, finish carpentry, and fine wallpaper installation in Williamson County, TN. One project at a time. A fixed price, no surprises.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Oswald:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #9E2B25;
+    --red-dark: #7E211C;
+    --denim: #3E5C76;
+    --cream: #F1E7D3;
+    --paper: #FDFBF7;
+    --ink: #1E1D1B;
+    --slab: 'Alfa Slab One', serif;
+    --cond: 'Oswald', sans-serif;
+    --body: 'Lora', serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--body); color: var(--ink); background: var(--paper); line-height: 1.7; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+  .kicker { font-family: var(--cond); font-weight: 600; letter-spacing: 4px; text-transform: uppercase; font-size: 13px; }
+  h1, h2 { font-family: var(--slab); font-weight: 400; line-height: 1.08; }
+
+  header { background: var(--paper); position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(30,29,27,0.12); }
+  .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 16px; }
+  .wordmark { font-family: var(--slab); font-size: 21px; color: var(--red); text-decoration: none; line-height: 1; }
+  .wordmark span { display: block; font-family: var(--cond); font-size: 10px; letter-spacing: 4px; color: var(--ink); font-weight: 500; margin-top: 3px; }
+  nav.links { display: flex; gap: 26px; align-items: center; }
+  nav.links a { font-family: var(--cond); font-weight: 500; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  nav.links a:hover { color: var(--red); }
+  .nav-cta { font-family: var(--cond); font-weight: 600; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--red); padding: 12px 24px; text-decoration: none; border-radius: 3px; }
+  .nav-cta:hover { background: var(--red-dark); }
+
+  .hero { position: relative; background: var(--ink); color: var(--paper); min-height: 86vh; display: flex; align-items: center; overflow: hidden; }
+  .hero-media { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: flex-end; padding: 18px;
+    background: linear-gradient(160deg, #2B2A27 0%, #1E1D1B 55%, #17222B 100%); }
+  .hero-media .slot-tag { font-family: var(--cond); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(253,251,247,0.4); border: 1px dashed rgba(253,251,247,0.35); padding: 6px 12px; }
+  .hero-inner { position: relative; padding: 110px 0; width: 100%; }
+  .hero h1 { font-size: clamp(46px, 8.5vw, 96px); color: var(--paper); max-width: 12ch; }
+  .hero h1 em { font-style: normal; color: #E8A87C; }
+  .hero .lede { max-width: 560px; font-size: 20px; margin-top: 26px; color: rgba(253,251,247,0.92); }
+  .hero .btn-row { margin-top: 38px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn { font-family: var(--cond); font-weight: 600; font-size: 15px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; padding: 16px 32px; border-radius: 3px; display: inline-block; }
+  .btn.solid { background: var(--red); color: #fff; }
+  .btn.solid:hover { background: var(--red-dark); }
+  .btn.ghost { color: var(--paper); border: 2px solid var(--paper); }
+  .btn.ghost:hover { background: var(--paper); color: var(--ink); }
+
+  .pillars { padding: 84px 0; }
+  .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 36px; }
+  .pillar .icon { width: 46px; height: 46px; color: var(--red); margin-bottom: 14px; }
+  .pillar h3 { font-family: var(--cond); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 16px; margin-bottom: 8px; }
+  .pillar p { font-size: 15.5px; color: #4A4843; }
+
+  .statement { background: var(--red); color: var(--paper); text-align: center; padding: 110px 0; }
+  .statement h2 { font-size: clamp(36px, 6vw, 68px); color: var(--paper); max-width: 16ch; margin: 0 auto; }
+  .statement p { max-width: 620px; margin: 26px auto 0; font-size: 19px; color: rgba(253,251,247,0.94); }
+  .statement .btn-row { margin-top: 36px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .statement .btn.ghost:hover { background: var(--paper); color: var(--red); }
+
+  .marquee-section { padding: 74px 0 10px; text-align: center; }
+  .marquee-section h2 { font-size: clamp(28px, 4vw, 44px); }
+  .marquee { overflow: hidden; margin-top: 42px; padding-bottom: 74px; }
+  .marquee-track { display: flex; gap: 16px; width: max-content; animation: scroll 36s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .tile { width: 260px; height: 260px; flex: none; background: var(--cream); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--cond); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--denim); border: 1.5px dashed var(--denim); text-align: center; padding: 12px; }
+  .tile:nth-child(even) { background: #EAE0CB; }
+
+  .promise { background: var(--denim); color: var(--paper); padding: 96px 0; }
+  .promise .head { text-align: center; margin-bottom: 56px; }
+  .promise .kicker { color: #F4C9A0; }
+  .promise h2 { color: var(--paper); font-size: clamp(32px, 5vw, 54px); margin-top: 10px; }
+  .promise-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; }
+  .promise-item { text-align: center; }
+  .promise-item .num { font-family: var(--slab); font-size: 40px; color: #F4C9A0; }
+  .promise-item h3 { font-family: var(--cond); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 16px; margin: 8px 0 10px; }
+  .promise-item p { font-size: 15.5px; color: rgba(253,251,247,0.9); }
+
+  .services { padding: 96px 0; }
+  .services .head { text-align: center; max-width: 680px; margin: 0 auto 54px; }
+  .services h2 { font-size: clamp(32px, 5vw, 54px); }
+  .services .head p { margin-top: 16px; font-size: 18px; color: #4A4843; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px; }
+  .card { background: #fff; border: 1px solid rgba(30,29,27,0.14); border-radius: 6px; overflow: hidden; box-shadow: 0 1px 0 rgba(30,29,27,0.05); }
+  .card .photo-slot { background: var(--cream); border-bottom: 1.5px dashed var(--denim); color: var(--denim); font-family: var(--cond); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; display: flex; align-items: center; justify-content: center; height: 190px; text-align: center; padding: 10px; }
+  .card .body { padding: 26px 26px 30px; }
+  .card h3 { font-family: var(--slab); font-weight: 400; font-size: 22px; color: var(--red); margin-bottom: 10px; }
+  .card p { font-size: 16px; color: #4A4843; }
+
+  .wallpaper { background: var(--ink); color: var(--paper); padding: 100px 0; }
+  .wallpaper .kicker { color: #E8A87C; }
+  .wallpaper h2 { color: var(--paper); font-size: clamp(34px, 5.5vw, 60px); margin-top: 10px; max-width: 14ch; }
+  .wallpaper .cols { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 54px; align-items: start; margin-top: 30px; }
+  .wallpaper p { font-size: 18px; color: rgba(253,251,247,0.92); }
+  .wallpaper p + p { margin-top: 16px; }
+  .designer-note { background: rgba(253,251,247,0.07); border: 1.5px solid rgba(253,251,247,0.5); border-radius: 6px; padding: 30px; }
+  .designer-note h3 { font-family: var(--cond); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 15px; margin-bottom: 12px; color: #E8A87C; }
+  .designer-note p { font-size: 16px; }
+
+  .about { padding: 96px 0; background: var(--cream); }
+  .about .cols { display: grid; grid-template-columns: 340px 1fr; gap: 54px; align-items: center; }
+  .about .photo-slot { height: 400px; background: #EAE0CB; border: 1.5px dashed var(--denim); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--cond); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--denim); }
+  .about h2 { font-size: clamp(30px, 4.5vw, 48px); margin: 10px 0 18px; }
+  .about p { font-size: 17.5px; }
+  .about p + p { margin-top: 14px; }
+  .signature { font-family: var(--slab); color: var(--red); font-size: 22px; margin-top: 22px; }
+
+  .cta-banner { background: var(--red); color: #fff; text-align: center; padding: 90px 0; }
+  .cta-banner h2 { color: #fff; font-size: clamp(34px, 6vw, 64px); }
+  .cta-banner p { max-width: 560px; margin: 20px auto 0; font-size: 19px; color: rgba(255,255,255,0.94); }
+  .cta-banner .email { font-family: var(--cond); font-weight: 600; font-size: 22px; letter-spacing: 1px; color: var(--red); background: #fff; padding: 16px 34px; border-radius: 3px; text-decoration: none; display: inline-block; margin-top: 34px; }
+  .cta-banner .email:hover { background: var(--cream); }
+  .cta-banner .service-area { margin-top: 34px; font-size: 15px; color: rgba(255,255,255,0.85); }
+
+  footer { padding: 34px 0; text-align: center; font-family: var(--cond); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #4A4843; }
+  footer .motto { font-family: var(--body); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 15px; color: var(--denim); margin-top: 8px; }
+
+  @media (max-width: 780px) {
+    nav.links a:not(.nav-cta) { display: none; }
+    .wallpaper .cols, .about .cols { grid-template-columns: 1fr; }
+    .hero { min-height: 72vh; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="wordmark" href="#top">The Franklin Craftsman<span>Spring Hill, Tenn.</span></a>
+    <nav class="links">
+      <a href="#services">The Work</a>
+      <a href="#wallpaper">Wallpaper</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Talk to Sean</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="hero-media"><span class="slot-tag">Video / photo slot: hands at work — tile, trim, paper</span></div>
+    <div class="wrap hero-inner">
+      <h1>Build it like you <em>mean</em> it.</h1>
+      <p class="lede">The Franklin Craftsman is founded on a simple idea: the way things used to be built is still the right way to build them. Show up early. Tell the truth. Sweep the floors. And don't call it done until it's right.</p>
+      <div class="btn-row">
+        <a class="btn solid" href="#contact">Talk to Sean</a>
+        <a class="btn ghost" href="#services">See the work</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="pillars">
+    <div class="wrap pillars-grid">
+      <div class="pillar">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        <h3>Straight answers, fast</h3>
+        <p>Walk-through first, then a fixed price in plain English. What it costs is what it costs — no games, no padding, no surprises.</p>
+      </div>
+      <div class="pillar">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg>
+        <h3>Backed in writing</h3>
+        <p>Every project comes with a one-year workmanship warranty. If something I built isn't right, I come back and make it right.</p>
+      </div>
+      <div class="pillar">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 21V9l9-6 9 6v12"/><path d="M9 21v-6h6v6"/></svg>
+        <h3>Your home, respected</h3>
+        <p>Floors covered, dust contained, tools squared away. The jobsite is cleaner every evening than it was that morning.</p>
+      </div>
+      <div class="pillar">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20L20 4"/><path d="M4 14v6h6"/><path d="M14 4h6v6"/></svg>
+        <h3>One project at a time</h3>
+        <p>When I'm on your job, I'm not on anyone else's. Your project gets the hands, the hours, and the attention it deserves.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement">
+    <div class="wrap">
+      <h2>Let's bring back the lost art.</h2>
+      <p>Somewhere along the way, "contractor" became a word people say with a sigh. We're here to change that — one bathroom, one built-in, one perfectly hung roll of paper at a time. Your grandfather knew builders like this. Now you do too.</p>
+      <div class="btn-row">
+        <a class="btn ghost" href="#about">Meet Sean</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="marquee-section">
+    <div class="wrap">
+      <p class="kicker" style="color:var(--red);">The Work</p>
+      <h2>Proof, not promises</h2>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="tile">Photo: finished bathroom</div>
+        <div class="tile">Photo: tile detail</div>
+        <div class="tile">Photo: Sean at work</div>
+        <div class="tile">Photo: built-in</div>
+        <div class="tile">Photo: wallpaper seam</div>
+        <div class="tile">Photo: trim mitre</div>
+        <div class="tile">Photo: before / after</div>
+        <div class="tile">Photo: the truck</div>
+        <div class="tile">Photo: finished bathroom</div>
+        <div class="tile">Photo: tile detail</div>
+        <div class="tile">Photo: Sean at work</div>
+        <div class="tile">Photo: built-in</div>
+        <div class="tile">Photo: wallpaper seam</div>
+        <div class="tile">Photo: trim mitre</div>
+        <div class="tile">Photo: before / after</div>
+        <div class="tile">Photo: the truck</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="promise" id="promise">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker">The Craftsman's Promise</p>
+        <h2>Our word is the warranty behind the warranty</h2>
+      </div>
+      <div class="promise-grid">
+        <div class="promise-item">
+          <div class="num">.01</div>
+          <h3>Early, not late</h3>
+          <p>You'll know who's coming and when — before you ever have to ask.</p>
+        </div>
+        <div class="promise-item">
+          <div class="num">.02</div>
+          <h3>Fixed price, no surprises</h3>
+          <p>Unknowns get named before demolition — not billed after it.</p>
+        </div>
+        <div class="promise-item">
+          <div class="num">.03</div>
+          <h3>Leave it better</h3>
+          <p>Your home protected every day, spotless every evening.</p>
+        </div>
+        <div class="promise-item">
+          <div class="num">.04</div>
+          <h3>Finish completely</h3>
+          <p>If it only looks good in photographs, it isn't finished.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="head">
+        <p class="kicker" style="color:var(--red);">What We Do</p>
+        <h2>Where quality matters</h2>
+        <p>We're not the everything contractor — on purpose. We take the projects where craftsmanship shows, and where it lasts.</p>
+      </div>
+      <div class="services-grid">
+        <div class="card">
+          <div class="photo-slot">Photo: finished bathroom</div>
+          <div class="body">
+            <h3>Bathroom remodels</h3>
+            <p>Premium baths built from the studs out. Waterproofing is never optional, and the work behind the tile gets the same care as the tile itself.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="photo-slot">Photo: built-in / trim detail</div>
+          <div class="body">
+            <h3>Finish carpentry &amp; built-ins</h3>
+            <p>Custom built-ins, trim, and architectural details. Good proportions, classic materials, joints that stay tight for twenty years.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="photo-slot">Photo: wallpaper seam close-up</div>
+          <div class="body">
+            <h3>Fine wallpaper</h3>
+            <p>Skilled paperhanging — grasscloth, wide-width, and hand-printed papers. One person prepares the wall and hangs the paper, so both get done right.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wallpaper" id="wallpaper">
+    <div class="wrap">
+      <p class="kicker">Fine Wallpaper</p>
+      <h2>The lost art, hung by hand.</h2>
+      <div class="cols">
+        <div>
+          <p>Here's a secret the industry won't tell you: skilled paperhangers are nearly extinct. Most remodelers won't touch fine paper. Most hangers can't repair the wall underneath it.</p>
+          <p>We do both — flat walls, invisible seams, patterns matched to the millimeter. Careful with every roll, because at this level there are no practice pieces.</p>
+        </div>
+        <div class="designer-note">
+          <h3>For interior designers</h3>
+          <p>Glad to work from your spec, receive and inspect client-purchased paper, and keep you in the loop at every step. Your client, your design — hung the way it deserves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="cols">
+        <div class="photo-slot">Photo: Sean at work</div>
+        <div>
+          <p class="kicker" style="color:var(--red);">Meet the Craftsman</p>
+          <h2>The same hands that answer the phone</h2>
+          <p>I'm Sean Penner. Nearly two decades in construction, and I still do the work myself — every cut, every seam, every cleanup. No crews to chase, no telephone tag with a project manager. The person you call is the person on the ladder.</p>
+          <p>I run things the old way: one project at a time, a fixed price with no surprises, and nothing leaves my hands unless I'd put it in my own home.</p>
+          <p class="signature">— Sean</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner" id="contact">
+    <div class="wrap">
+      <h2>Let's talk about your project.</h2>
+      <p>Tell me what you're dreaming up. I'll walk the space, tell you straight what I'd do, and exactly what it'll cost.</p>
+      <a class="email" href="mailto:sean@franklincraftsman.com">sean@franklincraftsman.com</a>
+      <p class="service-area">Proudly serving Williamson County, Tennessee — Franklin, Brentwood, Spring Hill, Thompson's Station, Nolensville, and Leiper's Fork.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    The Franklin Craftsman &middot; SRP Renovations LLC &middot; Spring Hill, TN
+    <div class="motto">Quietly exceptional. Loudly recommended.</div>
+  </div>
+</footer>
+
+</body>
+</html>
