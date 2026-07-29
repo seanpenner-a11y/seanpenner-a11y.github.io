@@ -39,9 +39,9 @@
   .nav-cta:hover { background: var(--red-dark); }
 
   .hero { position: relative; background: var(--ink); color: var(--paper); min-height: 86vh; display: flex; align-items: center; overflow: hidden; }
-  .hero-media { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: flex-end; padding: 18px;
-    background: linear-gradient(160deg, #2B2A27 0%, #1E1D1B 55%, #17222B 100%); }
-  .hero-media .slot-tag { font-family: var(--cond); font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: rgba(253,251,247,0.4); border: 1px dashed rgba(253,251,247,0.35); padding: 6px 12px; }
+  .hero-media { position: absolute; inset: 0;
+    background: linear-gradient(100deg, rgba(24,23,21,0.82) 0%, rgba(24,23,21,0.55) 55%, rgba(24,23,21,0.35) 100%), url('hero-bath-wide.jpg') center 60% / cover no-repeat; }
+  .tile img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block; }
   .hero-inner { position: relative; padding: 110px 0; width: 100%; }
   .hero h1 { font-size: clamp(46px, 8.5vw, 96px); color: var(--paper); max-width: 12ch; }
   .hero h1 em { font-style: normal; color: #E8A87C; }
@@ -147,7 +147,7 @@
 <main id="top">
 
   <div class="hero">
-    <div class="hero-media"><span class="slot-tag">Video / photo slot: hands at work — tile, trim, paper</span></div>
+    <div class="hero-media" role="img" aria-label="Finished master bathroom remodel with sage green vanity and walk-in shower"></div>
     <div class="wrap hero-inner">
       <h1>Build it like you <em>mean</em> it.</h1>
       <p class="lede">The Franklin Craftsman is founded on a simple idea: the way things used to be built is still the right way to build them. Show up early. Tell the truth. Sweep the floors. And don't call it done until it's right.</p>
@@ -200,22 +200,22 @@
     </div>
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <div class="tile">Photo: finished bathroom</div>
-        <div class="tile">Photo: tile detail</div>
-        <div class="tile">Photo: Sean at work</div>
-        <div class="tile">Photo: built-in</div>
-        <div class="tile">Photo: wallpaper seam</div>
-        <div class="tile">Photo: trim mitre</div>
-        <div class="tile">Photo: before / after</div>
-        <div class="tile">Photo: the truck</div>
-        <div class="tile">Photo: finished bathroom</div>
-        <div class="tile">Photo: tile detail</div>
-        <div class="tile">Photo: Sean at work</div>
-        <div class="tile">Photo: built-in</div>
-        <div class="tile">Photo: wallpaper seam</div>
-        <div class="tile">Photo: trim mitre</div>
-        <div class="tile">Photo: before / after</div>
-        <div class="tile">Photo: the truck</div>
+        <div class="tile"><img src="marquee-1.jpg" alt="Master bath double vanity and walk-in shower" loading="lazy"></div>
+        <div class="tile"><img src="marquee-2.jpg" alt="Sage green double vanity with brass hardware" loading="lazy"></div>
+        <div class="tile"><img src="marquee-3.jpg" alt="Walk-in shower with brass fixtures and hex tile floor" loading="lazy"></div>
+        <div class="tile"><img src="marquee-4.jpg" alt="Tiled shower niche detail" loading="lazy"></div>
+        <div class="tile"><img src="marquee-5.jpg" alt="Freestanding tub with wall-mount brass filler" loading="lazy"></div>
+        <div class="tile"><img src="marquee-6.jpg" alt="Single vanity with shiplap wainscoting" loading="lazy"></div>
+        <div class="tile"><img src="marquee-7.jpg" alt="Freestanding tub and arched built-in shelving" loading="lazy"></div>
+        <div class="tile"><img src="marquee-8.jpg" alt="Master bathroom overview" loading="lazy"></div>
+        <div class="tile"><img src="marquee-1.jpg" alt="" loading="lazy"></div>
+        <div class="tile"><img src="marquee-2.jpg" alt="" loading="lazy"></div>
+        <div class="tile"><img src="marquee-3.jpg" alt="" loading="lazy"></div>
+        <div class="tile"><img src="marquee-4.jpg" alt="" loading="lazy"></div>
+        <div class="tile"><img src="marquee-5.jpg" alt="" loading="lazy"></div>
+        <div class="tile"><img src="marquee-6.jpg" alt="" loading="lazy"></div>
+        <div class="tile"><img src="marquee-7.jpg" alt="" loading="lazy"></div>
+        <div class="tile"><img src="marquee-8.jpg" alt="" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -260,14 +260,14 @@
       </div>
       <div class="services-grid">
         <div class="card">
-          <div class="photo-slot">Photo: finished bathroom</div>
+          <div class="photo-slot" style="padding:0;border-bottom:none;"><img src="bath-vanity.jpg" alt="Finished bathroom with sage vanity, brass fixtures, and marble-look tile" style="width:100%;height:190px;object-fit:cover;object-position:center 70%;"></div>
           <div class="body">
             <h3>Bathroom remodels</h3>
             <p>Premium baths built from the studs out. Waterproofing is never optional, and the work behind the tile gets the same care as the tile itself.</p>
           </div>
         </div>
         <div class="card">
-          <div class="photo-slot">Photo: built-in / trim detail</div>
+          <div class="photo-slot" style="padding:0;border-bottom:none;"><img src="builtin-niche.jpg" alt="Custom arched built-in shelving niche with lighting" style="width:100%;height:190px;object-fit:cover;object-position:center 30%;"></div>
           <div class="body">
             <h3>Finish carpentry &amp; built-ins</h3>
             <p>Custom built-ins, trim, and architectural details. Good proportions, classic materials, joints that stay tight for twenty years.</p>
