@@ -31,6 +31,7 @@
   "slogan": "Build it like you mean it."
 }
 </script>
+<link rel="icon" type="image/png" href="badge.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Oswald:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -56,7 +57,7 @@
   header { background: var(--paper); position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(30,29,27,0.12); }
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 16px; }
   .wordmark { font-family: var(--slab); font-size: 21px; color: var(--red); text-decoration: none; line-height: 1; }
-  .wordmark span { display: block; font-family: var(--cond); font-size: 10px; letter-spacing: 4px; color: var(--ink); font-weight: 500; margin-top: 3px; }
+  .wordmark .wm-lines span { display: block; font-family: var(--cond); font-size: 10px; letter-spacing: 4px; color: var(--ink); font-weight: 500; margin-top: 3px; }
   nav.links { display: flex; gap: 26px; align-items: center; }
   nav.links a { font-family: var(--cond); font-weight: 500; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; }
   nav.links a:hover { color: var(--red); }
@@ -162,7 +163,7 @@
 
 <header>
   <div class="wrap nav" style="padding-right: 190px;">
-    <a class="wordmark" href="#top">The Franklin Craftsman<span>Williamson County, Tenn.</span></a>
+    <a class="wordmark" href="#top" style="display:flex;align-items:center;gap:12px;"><img src="badge.png" alt="The Franklin Craftsman badge" style="height:46px;width:46px;"><span class="wm-lines" style="display:block;font-family:var(--slab);font-size:21px;color:var(--red);line-height:1;">The Franklin Craftsman<span>Williamson County, Tenn.</span></span></a>
     <nav class="links">
       <a href="#services">The Work</a>
       <a href="#wallpaper">Wallpaper</a>
