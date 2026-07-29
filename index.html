@@ -35,7 +35,7 @@
   nav.links { display: flex; gap: 26px; align-items: center; }
   nav.links a { font-family: var(--cond); font-weight: 500; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; }
   nav.links a:hover { color: var(--red); }
-  .nav-cta { font-family: var(--cond); font-weight: 600; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--red); padding: 12px 24px; text-decoration: none; border-radius: 3px; }
+  .nav-cta { font-family: var(--cond); font-weight: 600; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--red); padding: 0 30px; text-decoration: none; border-radius: 0; position: absolute; right: 0; top: 0; bottom: 0; display: flex; align-items: center; }
   .nav-cta:hover { background: var(--red-dark); }
 
   .hero { position: relative; background: var(--ink); color: var(--paper); min-height: 86vh; display: flex; align-items: center; overflow: hidden; }
@@ -136,15 +136,15 @@
 <body>
 
 <header>
-  <div class="wrap nav">
+  <div class="wrap nav" style="padding-right: 190px;">
     <a class="wordmark" href="#top">The Franklin Craftsman<span>Williamson County, Tenn.</span></a>
     <nav class="links">
       <a href="#services">The Work</a>
       <a href="#wallpaper">Wallpaper</a>
       <a href="#about">About</a>
-      <a class="nav-cta" href="#contact">Talk to Sean</a>
     </nav>
   </div>
+  <a class="nav-cta" href="#contact">Talk to Sean</a>
 </header>
 
 <main id="top">
