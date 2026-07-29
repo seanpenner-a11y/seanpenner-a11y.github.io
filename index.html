@@ -72,8 +72,7 @@
   .marquee-track { display: flex; gap: 16px; width: max-content; animation: scroll 36s linear infinite; }
   .marquee:hover .marquee-track { animation-play-state: paused; }
   @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .tile { width: 260px; height: 260px; flex: none; background: var(--cream); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--cond); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--denim); border: 1.5px dashed var(--denim); text-align: center; padding: 12px; }
-  .tile:nth-child(even) { background: #EAE0CB; }
+  .tile { width: 260px; height: 260px; flex: none; border-radius: 6px; overflow: hidden; }
 
   .promise { background: var(--denim); color: var(--paper); padding: 96px 0; }
   .promise .head { text-align: center; margin-bottom: 56px; }
