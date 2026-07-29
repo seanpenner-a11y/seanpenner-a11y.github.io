@@ -39,8 +39,9 @@
   .nav-cta:hover { background: var(--red-dark); }
 
   .hero { position: relative; background: var(--ink); color: var(--paper); min-height: 86vh; display: flex; align-items: center; overflow: hidden; }
-  .hero-media { position: absolute; inset: 0;
-    background: linear-gradient(100deg, rgba(24,23,21,0.82) 0%, rgba(24,23,21,0.55) 55%, rgba(24,23,21,0.35) 100%), url('hero-bath-wide.jpg') center 60% / cover no-repeat; }
+  .hero-media { position: absolute; inset: 0; overflow: hidden; background: #1E1D1B; }
+  .hero-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(24,23,21,0.82) 0%, rgba(24,23,21,0.55) 55%, rgba(24,23,21,0.35) 100%); }
   .tile img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block; }
   .hero-inner { position: relative; padding: 110px 0; width: 100%; }
   .hero h1 { font-size: clamp(46px, 8.5vw, 96px); color: var(--paper); max-width: 12ch; }
@@ -147,7 +148,11 @@
 <main id="top">
 
   <div class="hero">
-    <div class="hero-media" role="img" aria-label="Finished master bathroom remodel with sage green vanity and walk-in shower"></div>
+    <div class="hero-media">
+      <video autoplay muted loop playsinline poster="hero-tub.jpg" aria-label="Sean at work: sanding drywall, dust containment, and hanging wallpaper">
+        <source src="hero-reel.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="wrap hero-inner">
       <h1>Build it like you <em>mean</em> it.</h1>
       <p class="lede">The Franklin Craftsman is founded on a simple idea: the way things used to be built is still the right way to build them. Show up early. Tell the truth. Sweep the floors. And don't call it done until it's right.</p>
@@ -274,7 +279,7 @@
           </div>
         </div>
         <div class="card">
-          <div class="photo-slot">Photo: wallpaper seam close-up</div>
+          <div class="photo-slot" style="padding:0;border-bottom:none;"><img src="wallpaper-install.jpg" alt="Floral wallpaper installation in progress with drop cloths protecting the floor" style="width:100%;height:190px;object-fit:cover;object-position:center 30%;"></div>
           <div class="body">
             <h3>Fine wallpaper</h3>
             <p>Skilled paperhanging — grasscloth, wide-width, and hand-printed papers. One person prepares the wall and hangs the paper, so both get done right.</p>
