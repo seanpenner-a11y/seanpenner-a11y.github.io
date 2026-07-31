@@ -59,6 +59,7 @@
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; gap: 16px; }
   .wordmark { font-family: var(--slab); font-size: 21px; color: var(--red); text-decoration: none; line-height: 1; }
   .wordmark .wm-lines span { display: block; font-family: var(--cond); font-size: 10px; letter-spacing: 4px; color: var(--ink); font-weight: 500; margin-top: 3px; }
+  .wordmark .wm-lines .st-abbr { display: none; }
   nav.links { display: flex; gap: 26px; align-items: center; }
   nav.links a { font-family: var(--cond); font-weight: 500; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; }
   nav.links a:hover { color: var(--red); }
@@ -152,8 +153,10 @@
 
   @media (max-width: 780px) {
     nav.links a:not(.nav-cta) { display: none; }
-    .wordmark img { height: 92px !important; width: 92px !important; }
-    .wordmark .wm-lines { display: none; }
+    .wordmark img { height: 76px !important; width: 76px !important; }
+    .wordmark .wm-lines { font-size: 17px !important; }
+    .wordmark .wm-lines .st-full { display: none; }
+    .wordmark .wm-lines .st-abbr { display: block; }
     .wallpaper .cols, .about .cols { grid-template-columns: 1fr; }
     .hero { min-height: auto; }
     .hero-inner { padding: 48px 0 56px; }
@@ -166,7 +169,7 @@
 
 <header>
   <div class="wrap nav" style="padding-right: 190px;">
-    <a class="wordmark" href="#top" style="display:flex;align-items:center;gap:14px;"><img src="badge.png" alt="The Franklin Craftsman badge" style="height:112px;width:112px;"><span class="wm-lines" style="display:block;font-family:var(--slab);font-size:23px;color:var(--red);line-height:1;">Franklin Craftsman<span>Williamson County, Tenn.</span></span></a>
+    <a class="wordmark" href="#top" style="display:flex;align-items:center;gap:14px;"><img src="badge.png" alt="The Franklin Craftsman badge" style="height:112px;width:112px;"><span class="wm-lines" style="display:block;font-family:var(--slab);font-size:23px;color:var(--red);line-height:1;">The Franklin Craftsman<span class="st-full">Williamson County, Tennessee</span><span class="st-abbr">Williamson County, TN</span></span></a>
     <nav class="links">
       <a href="#services">The Work</a>
       <a href="#wallpaper">Wallpaper</a>

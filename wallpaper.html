@@ -43,6 +43,7 @@
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; }
   .wordmark { font-family: var(--slab); font-size: 21px; color: var(--red); text-decoration: none; line-height: 1; }
   .wordmark span { display: block; font-family: var(--cond); font-size: 10px; letter-spacing: 4px; color: var(--ink); font-weight: 500; margin-top: 3px; }
+  .wordmark .st-abbr { display: none !important; }
   .nav-cta { font-family: var(--cond); font-weight: 600; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--red); padding: 0 30px; text-decoration: none; position: absolute; right: 0; top: 0; bottom: 0; display: flex; align-items: center; }
   .nav-cta:hover { background: var(--red-dark); }
   .hero { background: var(--ink); color: var(--paper); padding: 80px 0; }
@@ -75,15 +76,16 @@
   footer { padding: 30px 0; text-align: center; font-family: var(--cond); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #4A4843; }
   footer a { color: var(--red); }
   @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } .wrap { padding: 0 34px; }
-    .wordmark img { height: 92px !important; width: 92px !important; }
-    .wordmark > span { display: none !important; } }
+    .wordmark img { height: 76px !important; width: 76px !important; }
+    .wordmark .st-full { display: none !important; }
+    .wordmark .st-abbr { display: block !important; } }
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav" style="padding-right: 190px;">
-    <a class="wordmark" href="index.html" style="display:flex;align-items:center;gap:14px;"><img src="badge.png" alt="The Franklin Craftsman badge" style="height:112px;width:112px;"><span style="display:block;font-family:var(--slab);font-size:23px;color:var(--red);line-height:1;">Franklin Craftsman<span style="display:block;font-family:var(--cond);font-size:10px;letter-spacing:4px;color:var(--ink);font-weight:500;margin-top:3px;">Williamson County, Tenn.</span></span></a>
+    <a class="wordmark" href="index.html" style="display:flex;align-items:center;gap:14px;"><img src="badge.png" alt="The Franklin Craftsman badge" style="height:112px;width:112px;"><span style="display:block;font-family:var(--slab);font-size:23px;color:var(--red);line-height:1;">The Franklin Craftsman<span class="st-full" style="display:block;font-family:var(--cond);font-size:10px;letter-spacing:4px;color:var(--ink);font-weight:500;margin-top:3px;">Williamson County, Tennessee</span><span class="st-abbr" style="font-family:var(--cond);font-size:10px;letter-spacing:4px;color:var(--ink);font-weight:500;margin-top:3px;">Williamson County, TN</span></span></a>
   </div>
   <a class="nav-cta" href="#contact">Talk to Sean</a>
 </header>
