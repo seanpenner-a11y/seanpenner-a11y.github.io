@@ -1,8 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# LAUNCH CHECKLIST — when going live on franklincraftsman.com:
-# 1. Change "Disallow: /" to "Allow: /"
-# 2. Remove the noindex meta tag from index.html
-# 3. Uncomment the sitemap line below
-# Sitemap: https://franklincraftsman.com/sitemap.xml
+Sitemap: https://franklincraftsman.com/sitemap.xml
