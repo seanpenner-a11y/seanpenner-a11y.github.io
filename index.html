@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Franklin Craftsman — Build It Like You Mean It | Williamson County, TN</title>
+<title>Bathroom Remodels &amp; Wallpaper — Franklin, TN</title>
 <meta name="description" content="Premium bathroom remodels, finish carpentry, and fine wallpaper installation in Williamson County, TN. One project at a time. Honest pricing, no surprises.">
 <meta property="og:title" content="The Franklin Craftsman — Build It Like You Mean It">
 <meta property="og:description" content="Premium bathroom remodels, finish carpentry, and fine wallpaper installation in Williamson County, TN. One project at a time. Honest pricing, no surprises.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://franklincraftsman.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://franklincraftsman.com/mural-dining-3.jpg">
+<meta property="og:image" content="https://franklincraftsman.com/img/mural-dining-3-1656.jpg">
 <link rel="canonical" href="https://franklincraftsman.com/">
 <script type="application/ld+json">
 {
@@ -20,13 +20,15 @@
   "name": "The Franklin Craftsman",
   "legalName": "SRP Renovations LLC",
   "url": "https://franklincraftsman.com/",
-  "image": "https://franklincraftsman.com/mural-dining-3.jpg",
-  "logo": "https://franklincraftsman.com/badge.png",
+  "image": "https://franklincraftsman.com/img/mural-dining-3-1656.jpg",
+  "logo": "https://franklincraftsman.com/img/badge-224.png",
   "description": "Premium bathroom remodels, finish carpentry and built-ins, and fine wallpaper installation in Williamson County, TN. One project at a time.",
   "email": "sean@franklincraftsman.com",
   "telephone": "+16292355577",
   "priceRange": "$$",
   "address": { "@type": "PostalAddress", "addressLocality": "Spring Hill", "addressRegion": "TN", "addressCountry": "US" },
+  "geo": { "@type": "GeoCoordinates", "latitude": 35.7512, "longitude": -86.9300 },
+  "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "07:00", "closes": "17:00" }],
   "founder": { "@type": "Person", "name": "Sean Penner", "jobTitle": "Owner & Craftsman" },
   "sameAs": ["https://www.google.com/maps/search/?api=1&query=The+Franklin+Craftsman+Spring+Hill+TN"],
   "areaServed": [
@@ -47,7 +49,8 @@
   ]
 }
 </script>
-<link rel="icon" type="image/png" href="badge.png">
+<link rel="icon" type="image/png" href="img/badge-224.png">
+<link rel="preload" as="image" href="img/hero-tub-1280.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Oswald:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -65,6 +68,11 @@
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
+  img { max-width: 100%; }
+  picture { display: block; }
+  .tile picture { width: 100%; height: 100%; }
+  .photo-slot picture { width: 100%; }
+  .wordmark picture { flex: none; }
   body { font-family: var(--body); color: var(--ink); background: var(--paper); line-height: 1.7; }
   .wrap { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
   .kicker { font-family: var(--cond); font-weight: 600; letter-spacing: 4px; text-transform: uppercase; font-size: 13px; }
@@ -167,6 +175,12 @@
   footer { padding: 34px 0; text-align: center; font-family: var(--cond); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #4A4843; }
   footer .motto { font-family: var(--body); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 15px; color: var(--denim); margin-top: 8px; }
 
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .marquee-track { animation: none; }
+    .marquee { overflow-x: auto; }
+  }
+
   @media (max-width: 780px) {
     nav.links a:not(.nav-cta) { display: none; }
     .wordmark img { height: 100px !important; width: 100px !important; }
@@ -185,7 +199,7 @@
 
 <header>
   <div class="wrap nav" style="padding-right: 190px;">
-    <a class="wordmark" href="#top" style="display:flex;align-items:center;gap:14px;"><img src="badge.png" alt="The Franklin Craftsman badge" style="height:112px;width:112px;"><span class="wm-lines" style="display:block;font-family:var(--slab);font-size:23px;color:var(--red);line-height:1;">The Franklin Craftsman<span class="st-full">Williamson County, Tennessee</span><span class="st-abbr">Williamson County, TN</span></span></a>
+    <a class="wordmark" href="#top" style="display:flex;align-items:center;gap:14px;"><picture><source type="image/webp" srcset="img/badge-224.webp"><img src="img/badge-224.png" alt="The Franklin Craftsman badge" width="112" height="112" style="height:112px;width:112px;"></picture><span class="wm-lines" style="display:block;font-family:var(--slab);font-size:23px;color:var(--red);line-height:1;">The Franklin Craftsman<span class="st-full">Williamson County, Tennessee</span><span class="st-abbr">Williamson County, TN</span></span></a>
     <nav class="links">
       <a href="#services">The Work</a>
       <a href="wallpaper.html">Wallpaper</a>
@@ -199,8 +213,9 @@
 
   <div class="hero">
     <div class="hero-media">
-      <video autoplay muted loop playsinline poster="hero-tub.jpg" aria-label="Sean at work: sanding drywall, dust containment, and hanging wallpaper">
-        <source src="hero-reel-9.mp4" type="video/mp4">
+      <video autoplay muted loop playsinline preload="metadata" poster="img/hero-tub-1280.jpg" aria-label="Sean at work: sanding drywall, dust containment, and hanging wallpaper">
+        <source src="img/hero-reel-540.webm" type="video/webm">
+        <source src="img/hero-reel-540.mp4" type="video/mp4">
       </video>
     </div>
     <div class="wrap hero-inner">
@@ -255,24 +270,24 @@
     </div>
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <div class="tile"><img src="marquee-1.jpg" alt="Master bath double vanity and walk-in shower" loading="lazy"></div>
-        <div class="tile"><img src="marquee-3.jpg" alt="Walk-in shower with brass fixtures and hex tile floor" loading="lazy"></div>
-        <div class="tile"><img src="marquee-5.jpg" alt="Freestanding tub with wall-mount brass filler" loading="lazy"></div>
-        <div class="tile"><img src="marquee-6.jpg" alt="Single vanity with shiplap wainscoting" loading="lazy"></div>
-        <div class="tile"><img src="vanity-pro.jpg" alt="Remodeled bathroom with shiplap walls, brass fixtures, and custom vanity" loading="lazy"></div>
-        <div class="tile"><img src="cabin-deck.jpg" alt="New composite deck with black railings on a log cabin" loading="lazy"></div>
-        <div class="tile"><img src="herringbone.jpg" alt="Herringbone tile installation over a protected tub" loading="lazy"></div>
-        <div class="tile"><img src="paneled-bedroom.jpg" alt="Bedroom with custom floor-to-ceiling wall paneling" loading="lazy"></div>
-        <div class="tile"><img src="truck.jpg" alt="The Franklin Craftsman work truck loaded with organized tool storage" loading="lazy"></div>
-        <div class="tile"><img src="marquee-1.jpg" alt="" loading="lazy"></div>
-        <div class="tile"><img src="marquee-3.jpg" alt="" loading="lazy"></div>
-        <div class="tile"><img src="marquee-5.jpg" alt="" loading="lazy"></div>
-        <div class="tile"><img src="marquee-6.jpg" alt="" loading="lazy"></div>
-        <div class="tile"><img src="vanity-pro.jpg" alt="" loading="lazy"></div>
-        <div class="tile"><img src="cabin-deck.jpg" alt="" loading="lazy"></div>
-        <div class="tile"><img src="herringbone.jpg" alt="" loading="lazy"></div>
-        <div class="tile"><img src="paneled-bedroom.jpg" alt="" loading="lazy"></div>
-        <div class="tile"><img src="truck.jpg" alt="" loading="lazy"></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/marquee-1-520.webp"><img src="img/marquee-1-520.jpg" alt="Master bath double vanity and walk-in shower" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/marquee-3-520.webp"><img src="img/marquee-3-520.jpg" alt="Walk-in shower with brass fixtures and hex tile floor" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/marquee-5-520.webp"><img src="img/marquee-5-520.jpg" alt="Freestanding tub with wall-mount brass filler" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/marquee-6-520.webp"><img src="img/marquee-6-520.jpg" alt="Single vanity with shiplap wainscoting" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/vanity-pro-520.webp"><img src="img/vanity-pro-520.jpg" alt="Remodeled bathroom with shiplap walls, brass fixtures, and custom vanity" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/cabin-deck-520.webp"><img src="img/cabin-deck-520.jpg" alt="New composite deck with black railings on a log cabin" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/herringbone-520.webp"><img src="img/herringbone-520.jpg" alt="Herringbone tile installation over a protected tub" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/paneled-bedroom-520.webp"><img src="img/paneled-bedroom-520.jpg" alt="Bedroom with custom floor-to-ceiling wall paneling" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/truck-520.webp"><img src="img/truck-520.jpg" alt="The Franklin Craftsman work truck loaded with organized tool storage" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/marquee-1-520.webp"><img src="img/marquee-1-520.jpg" alt="" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/marquee-3-520.webp"><img src="img/marquee-3-520.jpg" alt="" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/marquee-5-520.webp"><img src="img/marquee-5-520.jpg" alt="" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/marquee-6-520.webp"><img src="img/marquee-6-520.jpg" alt="" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/vanity-pro-520.webp"><img src="img/vanity-pro-520.jpg" alt="" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/cabin-deck-520.webp"><img src="img/cabin-deck-520.jpg" alt="" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/herringbone-520.webp"><img src="img/herringbone-520.jpg" alt="" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/paneled-bedroom-520.webp"><img src="img/paneled-bedroom-520.jpg" alt="" width="260" height="260" loading="lazy" decoding="async"></picture></div>
+        <div class="tile"><picture><source type="image/webp" srcset="img/truck-520.webp"><img src="img/truck-520.jpg" alt="" width="260" height="260" loading="lazy" decoding="async"></picture></div>
       </div>
     </div>
   </section>
@@ -317,21 +332,21 @@
       </div>
       <div class="services-grid">
         <div class="card">
-          <div class="photo-slot" style="padding:0;border-bottom:none;"><img src="marquee-1.jpg" alt="Master bathroom remodel with sage double vanity and walk-in shower" style="width:100%;height:190px;object-fit:cover;object-position:center 45%;"></div>
+          <div class="photo-slot" style="padding:0;border-bottom:none;"><picture><source type="image/webp" srcset="img/marquee-1-card-740.webp"><img src="img/marquee-1-card-740.jpg" alt="Master bathroom remodel with sage double vanity and walk-in shower" width="370" height="190" loading="lazy" decoding="async" style="width:100%;height:190px;object-fit:cover;"></picture></div>
           <div class="body">
             <h3>Bathroom remodels</h3>
             <p>Premium baths built from the studs out. Waterproofing is never optional, and the work behind the tile gets the same care as the tile itself.</p>
           </div>
         </div>
         <div class="card">
-          <div class="photo-slot" style="padding:0;border-bottom:none;"><img src="paneled-bedroom.jpg" alt="Bedroom with custom floor-to-ceiling wall paneling in deep green" style="width:100%;height:190px;object-fit:cover;"></div>
+          <div class="photo-slot" style="padding:0;border-bottom:none;"><picture><source type="image/webp" srcset="img/paneled-bedroom-card-740.webp"><img src="img/paneled-bedroom-card-740.jpg" alt="Bedroom with custom floor-to-ceiling wall paneling in deep green" width="370" height="190" loading="lazy" decoding="async" style="width:100%;height:190px;object-fit:cover;"></picture></div>
           <div class="body">
             <h3>Finish carpentry &amp; built-ins</h3>
             <p>Custom built-ins, trim, and architectural details. Good proportions, classic materials, joints that stay tight for twenty years.</p>
           </div>
         </div>
         <div class="card">
-          <div class="photo-slot" style="padding:0;border-bottom:none;"><img src="wallpaper-card.jpg" alt="Detail of sepia tree mural wallpaper, hung by hand" style="width:100%;height:190px;object-fit:cover;"></div>
+          <div class="photo-slot" style="padding:0;border-bottom:none;"><picture><source type="image/webp" srcset="img/wallpaper-card-740.webp"><img src="img/wallpaper-card-740.jpg" alt="Detail of sepia tree mural wallpaper, hung by hand" width="370" height="190" loading="lazy" decoding="async" style="width:100%;height:190px;object-fit:cover;"></picture></div>
           <div class="body">
             <h3>Fine wallpaper</h3>
             <p>Skilled paperhanging — grasscloth, wide-width, and hand-printed papers. One person prepares the wall and hangs the paper, so both get done right.</p>
@@ -346,7 +361,7 @@
       <p class="kicker">Fine Wallpaper</p>
       <h2>The lost art, hung by hand.</h2>
       <figure style="margin: 34px 0 10px;">
-        <img src="mural-dining-3.jpg" alt="Dining room with sepia tree mural wallpaper panels framed in custom molding, and a handmade farmhouse table" style="width:100%;border-radius:6px;display:block;">
+        <picture><source type="image/webp" srcset="img/mural-dining-3-1656.webp"><img src="img/mural-dining-3-1656.jpg" alt="Dining room with sepia tree mural wallpaper panels framed in custom molding, and a handmade farmhouse table" width="1656" height="1105" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:6px;display:block;"></picture>
         <figcaption style="font-size:14px;color:rgba(253,251,247,0.7);margin-top:10px;font-style:italic;">Mural panels hung by hand and framed in custom molding. The table? Built that too.</figcaption>
       </figure>
       <div class="cols">
@@ -366,7 +381,7 @@
   <section class="about" id="about">
     <div class="wrap">
       <div class="cols">
-        <div class="photo-slot" style="border:none;background:none;padding:0;"><img src="sean.jpg" alt="Sean Penner, owner of The Franklin Craftsman" style="width:100%;height:400px;object-fit:cover;object-position:center 25%;border-radius:6px;"></div>
+        <div class="photo-slot" style="border:none;background:none;padding:0;"><picture><source type="image/webp" srcset="img/sean-680.webp"><img src="img/sean-680.jpg" alt="Sean Penner, owner of The Franklin Craftsman" width="340" height="400" loading="lazy" decoding="async" style="width:100%;height:400px;object-fit:cover;object-position:center 25%;border-radius:6px;"></picture></div>
         <div>
           <p class="kicker" style="color:var(--red);">Meet the Craftsman</p>
           <h2>The same hands that answer the phone</h2>
