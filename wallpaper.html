@@ -194,7 +194,7 @@
   :root { --red: #9E2B25; --red-dark: #7E211C; --denim: #3E5C76; --cream: #F1E7D3; --paper: #FDFBF7; --ink: #1E1D1B;
     --slab: 'Alfa Slab One', serif; --cond: 'Oswald', sans-serif; --body: 'Lora', serif; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   body { font-family: var(--body); color: var(--ink); background: var(--paper); line-height: 1.7; }
   .wrap { max-width: 1000px; margin: 0 auto; padding: 0 28px; }
   .kicker { font-family: var(--cond); font-weight: 600; letter-spacing: 4px; text-transform: uppercase; font-size: 13px; }
@@ -203,9 +203,9 @@
   header .wrap { max-width: 1160px; }
   .nav { display: flex; align-items: center; justify-content: space-between; padding: 10px 0; gap: 16px; }
   .wordmark { font-family: var(--slab); font-size: 21px; color: var(--red); text-decoration: none; line-height: 1; }
-  .wordmark span span { display: block; font-family: var(--cond); font-size: 10px; letter-spacing: 4px; color: var(--ink); font-weight: 500; margin-top: 3px; }
-  .wordmark .st-abbr { display: none !important; }
-  .wordmark .st-full { text-align: center; }
+  .wordmark .wm-lines span { display: block; font-family: var(--cond); font-size: 10px; letter-spacing: 4px; color: var(--ink); font-weight: 500; margin-top: 3px; }
+  .wordmark .wm-lines .st-abbr { display: none; }
+  .wordmark .wm-lines .st-full { text-align: center; }
   nav.links { display: flex; gap: 26px; align-items: center; }
   nav.links a { font-family: var(--cond); font-weight: 500; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--ink); text-decoration: none; }
   nav.links a:hover { color: var(--red); }
@@ -258,16 +258,16 @@
   @media (max-width: 780px) { .grid2 { grid-template-columns: 1fr; } .wrap { padding: 0 34px; }
     nav.links { display: none; }
     .wordmark img { height: 100px !important; width: 100px !important; }
-    .wordmark > span { font-size: 15px !important; }
-    .wordmark .st-full { display: none !important; }
-    .wordmark .st-abbr { display: block !important; font-size: 9.5px; letter-spacing: 1.5px; white-space: nowrap; } }
+    .wordmark .wm-lines { font-size: 15px !important; }
+    .wordmark .wm-lines .st-full { display: none; }
+    .wordmark .wm-lines .st-abbr { display: block; font-size: 9.5px; letter-spacing: 1.5px; white-space: nowrap; } }
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav" style="padding-right: 190px;">
-    <a class="wordmark" href="index.html" style="display:flex;align-items:center;gap:14px;"><picture><source type="image/webp" srcset="img/badge-224.webp"><img src="img/badge-224.png" alt="The Franklin Craftsman badge" width="112" height="112" style="height:112px;width:112px;"></picture><span style="display:block;font-family:var(--slab);font-size:23px;color:var(--red);line-height:1;">The Franklin Craftsman<span class="st-full" style="display:block;font-family:var(--cond);font-size:10px;letter-spacing:4px;color:var(--ink);font-weight:500;margin-top:3px;">Williamson County, Tennessee</span><span class="st-abbr" style="font-family:var(--cond);font-size:10px;letter-spacing:4px;color:var(--ink);font-weight:500;margin-top:3px;">Williamson County, TN</span></span></a>
+    <a class="wordmark" href="index.html" style="display:flex;align-items:center;gap:14px;"><picture><source type="image/webp" srcset="img/badge-224.webp"><img src="img/badge-224.png" alt="The Franklin Craftsman badge" width="112" height="112" style="height:112px;width:112px;"></picture><span class="wm-lines" style="display:block;font-family:var(--slab);font-size:23px;color:var(--red);line-height:1;">The Franklin Craftsman<span class="st-full">Williamson County, Tennessee</span><span class="st-abbr">Williamson County, TN</span></span></a>
     <nav class="links">
       <a href="index.html#services">The Work</a>
       <a href="wallpaper.html">Wallpaper</a>
