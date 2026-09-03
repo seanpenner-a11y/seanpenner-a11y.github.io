@@ -211,6 +211,10 @@
   nav.links a:hover { color: var(--red); }
   .nav-cta { font-family: var(--cond); font-weight: 600; font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: #fff; background: var(--red); padding: 0 30px; text-decoration: none; position: absolute; right: 0; top: 0; bottom: 0; display: flex; align-items: center; }
   .nav-cta:hover { background: var(--red-dark); }
+  .burger { display: none; align-items: center; margin-left: 12px; flex: none; }
+  .mmenu { display: none; background: var(--paper); border-top: 1px solid rgba(30,29,27,0.12); }
+  .mmenu a { display: block; padding: 15px 34px; font-family: var(--cond); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 15px; color: var(--ink); text-decoration: none; border-bottom: 1px solid rgba(30,29,27,0.08); }
+  .mmenu a:active, .mmenu a:hover { color: var(--red); }
   .hero { position: relative; background: var(--ink); color: var(--paper); padding: 150px 0; overflow: hidden; }
   .hero-media { position: absolute; inset: 0; background: #1E1D1B; }
   .hero-media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
@@ -257,6 +261,8 @@
   footer a { color: var(--red); }
   @media (max-width: 780px) { .grid2 { grid-template-columns: 1fr; } .wrap { padding: 0 34px; }
     nav.links { display: none; }
+    .burger { display: inline-flex !important; }
+    .mmenu.open { display: block; }
     .wordmark img { height: 100px !important; width: 100px !important; }
     .wordmark .wm-lines { font-size: 15px !important; }
     .wordmark .wm-lines .st-full { display: none; }
@@ -267,7 +273,7 @@
 
 <header>
   <div class="wrap nav" style="padding-right: 190px;">
-    <a class="wordmark" href="index.html" style="display:flex;align-items:center;gap:14px;"><picture><source type="image/webp" srcset="img/badge-224.webp"><img src="img/badge-224.png" alt="The Franklin Craftsman badge" width="112" height="112" style="height:112px;width:112px;"></picture><span class="wm-lines" style="display:block;font-family:var(--slab);font-size:23px;color:var(--red);line-height:1;">The Franklin Craftsman<span class="st-full">Williamson County, Tennessee</span><span class="st-abbr">Williamson County, TN</span></span></a>
+    <a class="wordmark" href="index.html" style="display:flex;align-items:center;gap:14px;"><picture><source type="image/webp" srcset="img/badge-224.webp"><img src="img/badge-224.png" alt="The Franklin Craftsman badge" width="112" height="112" style="height:112px;width:112px;"></picture><span class="wm-lines" style="display:block;font-family:var(--slab);font-size:23px;color:var(--red);line-height:1;">The Franklin Craftsman<span class="st-full">Williamson County, Tennessee</span><span class="st-abbr">Williamson County, TN</span></span><span class="burger" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1E1D1B" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg></span></a>
     <nav class="links">
       <a href="index.html#services">The Work</a>
       <a href="wallpaper.html">Wallpaper</a>
@@ -276,6 +282,21 @@
     </nav>
   </div>
   <a class="nav-cta" href="#contact">Talk to Sean</a>
+  <nav class="mmenu" id="mmenu">
+    <a href="index.html">Home</a>
+    <a href="index.html#services">The Work</a>
+    <a href="wallpaper.html">Wallpaper</a>
+    <a href="wainscoting.html">Wainscoting</a>
+    <a href="index.html#about">About</a>
+  </nav>
+  <script>
+  (function(){
+    var wm = document.querySelector(".wordmark"), m = document.getElementById("mmenu");
+    wm.addEventListener("click", function(e){
+      if (window.matchMedia("(max-width: 780px)").matches) { e.preventDefault(); m.classList.toggle("open"); }
+    });
+  })();
+  </script>
 </header>
 
 <main>
