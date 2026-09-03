@@ -242,6 +242,17 @@
   .cta-banner h2 { color: #fff; }
   .cta-banner p { max-width: 560px; margin: 16px auto 0; font-size: 18px; }
   .email { font-family: var(--cond); font-weight: 600; font-size: 20px; letter-spacing: 1px; color: var(--red); background: #fff; padding: 15px 32px; border-radius: 3px; text-decoration: none; display: inline-block; margin-top: 30px; }
+  .sms-pick { margin-top: 36px; }
+  .sms-pick .sms-q { font-family: var(--cond); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 15px; color: rgba(255,255,255,0.95); }
+  .sms-btns { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 18px; }
+  .sms-btns a { font-family: var(--cond); font-weight: 600; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); background: #fff; padding: 14px 24px; border-radius: 3px; text-decoration: none; }
+  .sms-btns a:hover { background: var(--cream); }
+  .sms-or { margin-top: 30px; font-size: 14px; color: rgba(255,255,255,0.75); font-style: italic; }
+  .sms-btns button { font-family: var(--cond); font-weight: 600; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); background: #fff; padding: 14px 24px; border-radius: 3px; border: none; cursor: pointer; }
+  .sms-btns button:hover { background: var(--cream); }
+  .sms-btns button.on { background: var(--ink); color: #fff; }
+  .sms-size { display: none; margin-top: 18px; }
+  .sms-size.show { display: block; }
   footer { padding: 30px 0; text-align: center; font-family: var(--cond); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: #4A4843; }
   footer a { color: var(--red); }
   @media (max-width: 780px) { .grid2 { grid-template-columns: 1fr; } .wrap { padding: 0 34px; }
@@ -331,6 +342,46 @@
     <div class="wrap">
       <h2>Got a paper picked out?</h2>
       <p>Send me the room and the pattern. I'll tell you what it needs, what it costs, and when I can hang it.</p>
+      <div class="sms-pick">
+        <p class="sms-q">Tap what you need &mdash; it starts a text straight to my phone</p>
+        <div class="sms-btns" id="smsStep1">
+          <button data-msg="I've got a wallpaper project in mind.">Wallpaper</button>
+          <button data-msg="I'm interested in wainscoting or paneling.">Wainscoting &amp; paneling</button>
+          <button data-msg="I'd like to talk about a bathroom remodel.">Bathroom remodel</button>
+          <button data-msg="I've got a project I'd like to talk about.">Something else</button>
+        </div>
+        <div class="sms-size" id="smsStep2">
+          <p class="sms-q">How big are we talking?</p>
+          <div class="sms-btns">
+            <button data-size="It's one wall.">One wall</button>
+            <button data-size="It's one room.">One room</button>
+            <button data-size="It's several rooms.">Several rooms</button>
+            <button data-size="I'm not sure yet.">Not sure yet</button>
+          </div>
+        </div>
+        <p class="sms-or">prefer to call or email?</p>
+      </div>
+      <script>
+      (function(){
+        var msg = "";
+        var s1 = document.getElementById("smsStep1"), s2 = document.getElementById("smsStep2");
+        var q1 = s1.previousElementSibling;
+        s1.addEventListener("click", function(e){
+          var b = e.target.closest("button"); if(!b) return;
+          msg = b.getAttribute("data-msg");
+          q1.style.display = "none";
+          s1.style.display = "none";
+          s2.classList.add("show");
+        });
+        s2.addEventListener("click", function(e){
+          var b = e.target.closest("button"); if(!b) return;
+          var body = "Hi Sean \u2014 " + msg + " " + b.getAttribute("data-size");
+          window.location.href = "sms:+16292355577?&body=" + encodeURIComponent(body);
+        });
+      })();
+      </script>
+        <p class="sms-or">prefer to call or email?</p>
+      </div>
       <a class="email" href="tel:+16292355577" style="margin-right:12px;">(629) 235-5577</a>
       <a class="email" href="mailto:sean@franklincraftsman.com">sean@franklincraftsman.com</a>
     </div>
