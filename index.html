@@ -131,6 +131,15 @@
   @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   .tile { width: 260px; height: 260px; flex: none; border-radius: 6px; overflow: hidden; }
 
+  .reviews { background: var(--cream); text-align: center; padding: 84px 0; }
+  .reviews .score { font-family: var(--slab); font-size: 34px; margin-top: 8px; }
+  .reviews .stars { color: #EF9F27; letter-spacing: 3px; }
+  .reviews .count { font-size: 15px; color: #4A4843; margin: 4px 0 30px; }
+  .rev-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; text-align: left; }
+  .rev-card { background: var(--paper); border: 1px solid rgba(30,29,27,0.15); border-radius: 6px; padding: 22px; }
+  .rev-card .stars { font-size: 14px; letter-spacing: 2px; }
+  .rev-card p { font-style: italic; font-size: 15.5px; line-height: 1.6; margin: 10px 0 12px; }
+  .rev-card cite { font-family: var(--cond); font-weight: 600; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); font-style: normal; }
   .promise { background: var(--denim); color: var(--paper); padding: 96px 0; }
   .promise .head { text-align: center; margin-bottom: 56px; }
   .promise .kicker { color: #F4C9A0; }
@@ -357,6 +366,32 @@
     </div>
   </section>
 
+  <section class="reviews" id="reviews">
+    <div class="wrap">
+      <p class="kicker" style="color:var(--red);">What neighbors say</p>
+      <div class="score">5.0 <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+      <p class="count">from 6 Google reviews</p>
+      <div class="rev-grid">
+        <div class="rev-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Sean's attention to detail, clear communication, and precise handiwork stood out to us. I would highly recommend Sean Penner for home renovations."</p>
+          <cite>Katie K. &middot; Google</cite>
+        </div>
+        <div class="rev-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"I've used Sean several times over the last year. He not only is meticulous, but very efficient and fast. Highly recommend him."</p>
+          <cite>Sandy N. &middot; Google</cite>
+        </div>
+        <div class="rev-card">
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <p>"Phenomenal quality of work and professionalism."</p>
+          <cite>John F. &middot; Google</cite>
+        </div>
+      </div>
+      <a class="btn solid" href="https://www.google.com/maps/place/The+Franklin+Craftsman/@36.0492214,-86.785147,17z/data=!3m1!4b1!4m6!3m5!1s0x628feaf7e9e2bff5:0xe59470a0e54cad84!8m2!3d36.0492214!4d-86.785147!16s%2Fg%2F11zdr0ty_z" target="_blank" rel="noopener">Read all reviews on Google</a>
+    </div>
+  </section>
+
   <section class="pillars">
     <div class="wrap pillars-grid">
       <div class="pillar">
@@ -493,7 +528,7 @@
 
 <footer>
   <div class="wrap">
-    The Franklin Craftsman &middot; SRP Renovations LLC &middot; Williamson County, TN &middot; <a href="wallpaper.html" style="color:var(--red);">Wallpaper</a> &middot; <a href="wainscoting.html" style="color:var(--red);">Wainscoting</a>
+    The Franklin Craftsman &middot; SRP Renovations LLC &middot; Williamson County, TN &middot; <a href="wallpaper.html" style="color:var(--red);">Wallpaper</a> &middot; <a href="wainscoting.html" style="color:var(--red);">Wainscoting</a> &middot; <a href="spring-hill.html">Spring Hill</a> &middot; <a href="thompsons-station.html">Thompson's Station</a>
     <div class="motto">Quietly exceptional. Loudly recommended.</div>
   </div>
 </footer>
